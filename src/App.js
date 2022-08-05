@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Axios from "axios";
-import Dialog from "@material-ui/core/Dialog";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogActions from "@material-ui/core/DialogActions";
+
+import {
+  RecipeComponent
+} from './RecipeComponent'
 
 import {
   Container,
@@ -16,62 +16,12 @@ import {
 } from './components/header'
 import {
   RecipeListContainer,
-  RecipeContainer,
-  CoverImage,
-  RecipeName,
-  SeeMoreText,
-  IngredientsText,
-  SeeNewTab,
+
   Placeholder
 } from './components/Recipe'
 
 const APP_ID = "5ed03060";
 const APP_KEY = "05d029db9db9febdd61b9d9ad8d03e6e	";
-
-const RecipeComponent = (props) => {
-  const [show, setShow] = useState("");
-  const { label, image, ingredients, url } = props.recipe;
-  return (
-    <RecipeContainer>
-      <Dialog
-        onClose={() => console.log("adsadad")}
-        aria-labelledby="simple-dialog-title"
-        open={!!show}
-      >
-        <DialogTitle>Ingredients</DialogTitle>
-        <DialogContent>
-          <RecipeName>{label}</RecipeName>
-          <table>
-            <thead>
-              <th>Ingredient</th>
-              <th>Weight(g)</th>
-            </thead>
-            <tbody>
-              {ingredients.map((ingredient, index) => (
-                <tr key={index} className="ingredient-list">
-                  <td>{ingredient.text}</td>
-                  <td>{parseFloat(ingredient.weight).toFixed( 2 )}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </DialogContent>
-        <DialogActions>
-          <SeeNewTab onClick={() => window.open(url)}>See More</SeeNewTab>
-          <SeeMoreText onClick={() => setShow("")}>Close</SeeMoreText>
-        </DialogActions>
-      </Dialog>
-      <CoverImage src={image} alt={label} />
-      <RecipeName>{label}</RecipeName>
-      <IngredientsText onClick={() => setShow(!show)}>
-        Ingredients
-      </IngredientsText>     
-      <SeeMoreText onClick={() => window.open(url)}>        
-        See Complete Recipe
-      </SeeMoreText> 
-    </RecipeContainer>
-  );
-};
 
 const App = () => {
   const [searchQuery, updateSearchQuery] = useState("");
@@ -90,8 +40,6 @@ const App = () => {
     const timeout = setTimeout(() => fetchData(e.target.value), 500); 
     updateTimeoutId(timeout); 
   };
-
-
 
   return (
       <Container>
