@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from 'styled-components'
 import Axios from "axios";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -7,6 +6,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
 
 import {
+  Container,
   Header,
   RecipeImage,
   AppName,
@@ -20,26 +20,13 @@ import {
   CoverImage,
   RecipeName,
   SeeMoreText,
-  IngredientsText
+  IngredientsText,
+  SeeNewTab,
+  Placeholder
 } from './components/Recipe'
 
 const APP_ID = "5ed03060";
 const APP_KEY = "05d029db9db9febdd61b9d9ad8d03e6e	";
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const Placeholder = styled.img`
-  width: 120px;
-  height: 120px;
-  margin: 200px;
-  opacity: 50%;
-`;
-const SeeNewTab = styled(SeeMoreText)`
-  color: green;
-  border: solid 1px green;
-`;
 
 const RecipeComponent = (props) => {
   const [show, setShow] = useState("");
@@ -86,10 +73,8 @@ const RecipeComponent = (props) => {
   );
 };
 
-
-
 const App = () => {
-  // const [searchQuery, updateSearchQuery] = useState("");
+  const [searchQuery, updateSearchQuery] = useState("");
   const [recipeList, updateRecipeList] = useState([]);
   const [timeoutId, updateTimeoutId] = useState();
   const fetchData = async (searchString) => {
@@ -101,7 +86,7 @@ const App = () => {
 
   const onTextChange = (e) => {
     clearTimeout(timeoutId);
-    // updateSearchQuery(e.target.value);
+    updateSearchQuery(e.target.value);
     const timeout = setTimeout(() => fetchData(e.target.value), 500); 
     updateTimeoutId(timeout); 
   };
@@ -119,7 +104,7 @@ const App = () => {
             <SearchIcon src="/finder/search-icon.svg" />
             <SearchInput
               placeholder="Search Recipe"
-              // value={searchQuery}
+              value={searchQuery}
               onChange={onTextChange}
             />
           </SearchBox>
@@ -134,9 +119,6 @@ const App = () => {
         )}
         </RecipeListContainer>  
       </Container>
-
-
-
   );
 }
 

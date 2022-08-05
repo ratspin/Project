@@ -43,3 +43,13 @@ export const IngredientsText = styled(SeeMoreText)`
   color: green;
   border: solid 1px green;
 `;
+export const SeeNewTab = styled(SeeMoreText)`
+  color: green;
+  border: solid 1px green;
+`;
+export const Placeholder = styled.img`
+  width: 120px;
+  height: 120px;
+  margin: 200px;
+  opacity: 50%;
+`;
