@@ -27,7 +27,7 @@ export const SearchBox = styled.div`
   padding: 10px 10px;
   border-radius: 6px;
   margin-left: 20px;
-  width: 50%;
+  width: 40%;
   background-color: white;
   `;
 export const RecipeImage = styled.img`
@@ -46,4 +46,10 @@ export const SearchInput = styled.input`
   border: none;
   outline: none;
   margin-left: 15px;
+  width: 100%;
+`;
+export const Foodfilter = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;

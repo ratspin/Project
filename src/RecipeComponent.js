@@ -29,13 +29,15 @@ export const RecipeComponent = (props) => {
             <table>
               <thead>
                 <th>Ingredient</th>
-                <th>Weight(g)</th>
+                <th>Quantity</th>
+                <th>Measure</th>
               </thead>
               <tbody>
                 {ingredients.map((ingredient, index) => (
                   <tr key={index} className="ingredient-list">
                     <td>{ingredient.text}</td>
-                    <td>{parseFloat(ingredient.weight).toFixed(2)}</td>
+                    <td>{ingredient.quantity}</td>
+                    <td>{ingredient.measure}</td>
                   </tr>
                 ))}
               </tbody>

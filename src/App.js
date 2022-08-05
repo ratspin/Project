@@ -13,12 +13,14 @@ import {
   SearchBox,
   SearchIcon,
   SearchInput,
+  Foodfilter
 } from './components/header'
 import {
   RecipeListContainer,
-
   Placeholder
 } from './components/Recipe'
+
+
 
 const APP_ID = "5ed03060";
 const APP_KEY = "05d029db9db9febdd61b9d9ad8d03e6e	";
@@ -56,6 +58,10 @@ const App = () => {
               onChange={onTextChange}
             />
           </SearchBox>
+          <Foodfilter>
+            <RecipeImage src="/finder/hamburger.svg" />
+            Recipe Finder
+          </Foodfilter>
         </Header>
         <RecipeListContainer>
         {recipeList?.length ? (
