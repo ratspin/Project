@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Header = styled.div`
-background-color: black;
+background-color: #FFA500;
 color: white;
 display: flex;
 justify-content: space-between;
@@ -11,10 +11,6 @@ padding: 20px;
 font-size: 25px;
 font-weight: bold;
 box-shadow: 0 3px 6px 0 #555;
-`;
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 export const AppName = styled.div`
   display: flex;
