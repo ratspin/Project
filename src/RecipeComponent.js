@@ -11,7 +11,7 @@ import {
     SeeMoreText,
     IngredientsText,
     SeeNewTab,
-  } from './components/Recipe'
+  } from './style/Recipe'
 
 export const RecipeComponent = (props) => {
     const [show, setShow] = useState("");

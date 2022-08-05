@@ -23,7 +23,7 @@ import {
 const APP_ID = "5ed03060";
 const APP_KEY = "91001199901b59990e413c4286c3fcc3";
 
-const App = () => {
+const RecipeFinder = () => {
   const [searchQuery, updateSearchQuery] = useState("");
   const [recipeList, updateRecipeList] = useState([]);
   const [timeoutId, updateTimeoutId] = useState();
@@ -74,4 +74,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default RecipeFinder;
