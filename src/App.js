@@ -1,77 +1,18 @@
-import React, { useState } from "react";
-import Axios from "axios";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RecipeFinder from './RecipeFinder'
+// import App2 from './App2'
 
-import {
-  RecipeComponent
-} from './RecipeComponent'
-
-import {
-  Container,
-  Header,
-  RecipeImage,
-  AppName,
-  SearchBox,
-  SearchIcon,
-  SearchInput,
-  Foodfilter
-} from './style/header'
-import {
-  RecipeListContainer,
-  Placeholder
-} from './style/Recipe'
-
-const APP_ID = "5ed03060";
-const APP_KEY = "91001199901b59990e413c4286c3fcc3";
-
-const App = () => {
-  const [searchQuery, updateSearchQuery] = useState("");
-  const [recipeList, updateRecipeList] = useState([]);
-  const [timeoutId, updateTimeoutId] = useState();
-  const fetchData = async (searchString) => {
-    const response = await Axios.get(
-      `https://api.edamam.com/search?q=${searchString}&search?to=16&app_id=${APP_ID}&app_key=${APP_KEY}&to=100&from=0`,
-      );
-      updateRecipeList(response.data.hits);
-  };
-
-  const onTextChange = (e) => {
-    clearTimeout(timeoutId);
-    updateSearchQuery(e.target.value);
-    const timeout = setTimeout(() => fetchData(e.target.value), 500); 
-    updateTimeoutId(timeout); 
-  };
-
+export default function App() {
   return (
-      <Container>
-        <Header>
-          <AppName>
-            <RecipeImage src="/finder/hamburger.svg" />
-            Recipe Finder
-          </AppName>
-          <SearchBox>
-            <SearchIcon src="/finder/search-icon.svg" />
-            <SearchInput
-              placeholder="Search Recipe"
-              value={searchQuery}
-              onChange={onTextChange}
-            />
-          </SearchBox>
-          <Foodfilter>
-            <RecipeImage src="/finder/hamburger.svg" />
-            Recipe Finder
-          </Foodfilter>
-        </Header>
-        <RecipeListContainer>
-        {recipeList?.length ? (
-          recipeList.map((recipe, index) => (
-            <RecipeComponent key={index} recipe={recipe.recipe} />
-          ))
-        ) : (
-          <Placeholder src="/finder/hamburger.svg" />
-        )}
-        </RecipeListContainer>  
-      </Container>
+      <div>
+        <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<RecipeFinder />} />
+          <Route path='/RecipeFinder' element={<RecipeFinder />} />
+
+        </Routes>
+        </BrowserRouter>
+      </div>
   );
 }
-
-export default App;

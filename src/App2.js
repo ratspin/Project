@@ -7,7 +7,7 @@ import {RecipeListContainer,Placeholder} from './style/Recipe'
 const APP_ID = "5ed03060";
 const APP_KEY = "91001199901b59990e413c4286c3fcc3";
 
-const RecipeFinder = () => {
+const App2 = () => {
   const [searchQuery, updateSearchQuery] = useState("");
   const [recipeList, updateRecipeList] = useState([]);
   const [timeoutId, updateTimeoutId] = useState();
@@ -58,4 +58,4 @@ const RecipeFinder = () => {
   );
 }
 
-export default RecipeFinder;
+export default App2;
