@@ -1,61 +1,60 @@
-import React, { useState } from "react";
 import Axios from "axios";
-import {RecipeComponent} from './RecipeComponent'
-import {Container,Header,RecipeImage,AppName,SearchBox,SearchIcon,SearchInput,Foodfilter} from './style/header'
-import {RecipeListContainer,Placeholder} from './style/Recipe'
+import "./App2.css";
+import { useState } from "react";
+import RecipeTile from "./RecipeTile";
 
-const APP_ID = "5ed03060";
-const APP_KEY = "91001199901b59990e413c4286c3fcc3";
 
-const App2 = () => {
-  const [searchQuery, updateSearchQuery] = useState("");
-  const [recipeList, updateRecipeList] = useState([]);
-  const [timeoutId, updateTimeoutId] = useState();
-  const fetchData = async (searchString) => {
-    const response = await Axios.get(
-      `https://api.edamam.com/search?q=${searchString}&search?to=16&app_id=${APP_ID}&app_key=${APP_KEY}&to=100&from=0`,
-      );
-      updateRecipeList(response.data.hits);
+export default function App2() {
+  const [query, setquery] = useState("");
+  const [recipes, setrecipes] = useState([]);
+  const [dishType, setdishType] = useState("egg");
+
+  const APP_ID = "5ed03060";
+  const APP_KEY = "91001199901b59990e413c4286c3fcc3";
+  const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&dishType=${dishType}`;
+  
+  
+  const getRecipeInfo = async () => {
+    var result = await Axios.get(url);
+    setrecipes(result.data.hits);
+    console.log(result.data.hits);
   };
-
-  const onTextChange = (e) => {
-    clearTimeout(timeoutId);
-    updateSearchQuery(e.target.value);
-    const timeout = setTimeout(() => fetchData(e.target.value), 500); 
-    updateTimeoutId(timeout); 
+  
+  const onSubmit = (e) => {
+    e.preventDefault();
+    getRecipeInfo();
   };
-
+  
   return (
-      <Container>
-        <Header>
-          <AppName>
-            <RecipeImage src="/finder/hamburger.svg" />
-            Recipe Finder
-          </AppName>
-          <SearchBox>
-            <SearchIcon src="/finder/search-icon.svg" />
-            <SearchInput
-              placeholder="Search Recipe"
-              value={searchQuery}
-              onChange={onTextChange}
-            />
-          </SearchBox>
-          <Foodfilter>
-            <RecipeImage src="/finder/hamburger.svg" />
-            Recipe Finder
-          </Foodfilter>
-        </Header>
-        <RecipeListContainer>
-        {recipeList?.length ? (
-          recipeList.map((recipe, index) => (
-            <RecipeComponent key={index} recipe={recipe.recipe} />
-          ))
-        ) : (
-          <Placeholder src="/finder/hamburger.svg" />
-        )}
-        </RecipeListContainer>  
-      </Container>
-  );
+    <div className="app">
+      <h1 onClick={getRecipeInfo}>Food Recipe Plaza 🍔</h1>
+      <form className="app__searchForm" onSubmit={onSubmit}>
+        <input
+          className="app__input"
+          type="text"
+          placeholder="enter ingridient"
+          autoComplete="Off"
+          value={query}
+          onChange={(e) => setquery(e.target.value)}
+        />
+        <input className="app__submit" type="submit" value="Search" />
+
+        <select className="app__dishType" onChange={(e) => setdishType(e.target.value)}>
+        <option onClick = {() => setdishType("bread")}>bread</option>
+        <option onClick = {() => setdishType("egg")}>egg</option>
+        </select>
+
+      </form>
+
+
+
+      <div className="app__recipes">
+        {recipes !== [] &&
+          recipes.map((recipe) => {
+            return <RecipeTile recipe={recipe} />;
+          })}
+      </div>
+    </div>
+);
 }
 
-export default App2;
