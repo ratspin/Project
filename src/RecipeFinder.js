@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Axios from "axios";
 import {RecipeComponent} from './RecipeComponent'
 import {Container,Header,RecipeImage,AppName,SearchBox,SearchIcon,SearchInput,Foodfilter} from './style/header'
-import {RecipeListContainer,Placeholder} from './style/Recipe'
+import {RecipeListContainer} from './style/Recipe'
 
-const APP_ID = "5ed03060";
-const APP_KEY = "91001199901b59990e413c4286c3fcc3";
+// const APP_ID = "";
+// const APP_KEY = "";
 
 const RecipeFinder = () => {
   const [searchQuery, updateSearchQuery] = useState("");
@@ -13,7 +13,7 @@ const RecipeFinder = () => {
   const [timeoutId, updateTimeoutId] = useState();
   const fetchData = async (searchString) => {
     const response = await Axios.get(
-      `https://api.edamam.com/search?q=${searchString}&search?to=16&app_id=${APP_ID}&app_key=${APP_KEY}&to=100&from=0`,
+      `https://api.edamam.com/search?q=${searchString}&search?to=16&app_id=5ed03060&app_key=91001199901b59990e413c4286c3fcc3&to=100&from=0`,
       );
       updateRecipeList(response.data.hits);
   };
@@ -46,16 +46,15 @@ const RecipeFinder = () => {
           </Foodfilter>
         </Header>
         <RecipeListContainer>
-        {recipeList?.length ? (
-          recipeList.map((recipe, index) => (
-            <RecipeComponent key={index} recipe={recipe.recipe} />
-          ))
-        ) : (
-          <Placeholder src="/finder/hamburger.svg" />
-        )}
+        {recipeList !== [] &&
+  recipeList.map((recipe) => {
+    return <RecipeComponent  recipe={recipe.recipe} />;
+  })}
         </RecipeListContainer>  
       </Container>
   );
 }
 
 export default RecipeFinder;
+
+
