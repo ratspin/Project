@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RecipeFinder from './RecipeFinder'
 import App2 from './RecipeFinder2'
-import Checkbox from './Checkbox'
+import CheckboxLabels from './CheckboxLabels'
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={<App2 />} />
           <Route path='/RecipeFinder' element={<RecipeFinder />} />
-          <Route path='/Checkbox' element={<Checkbox />} />
+          <Route path='/CheckboxLabels' element={<CheckboxLabels />} />
         </Routes>
         </BrowserRouter>
       </div>

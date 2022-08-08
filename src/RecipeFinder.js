@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import {RecipeComponent} from './RecipeComponent'
-import {Container,Header,RecipeImage,AppName,SearchBox,SearchIcon,SearchInput,Foodfilter} from './style/header'
+import {Container,Header,RecipeImage,AppName,SearchBox,SearchIcon,SearchInput} from './style/header'
 import {RecipeListContainer} from './style/Recipe'
-
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 // const APP_ID = "";
 // const APP_KEY = "";
 
@@ -40,10 +42,9 @@ const RecipeFinder = () => {
               onChange={onTextChange}
             />
           </SearchBox>
-          <Foodfilter>
-            <RecipeImage src="/finder/hamburger.svg" />
-            Recipe Finder
-          </Foodfilter>
+          <FormGroup>
+              <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
+          </FormGroup>
         </Header>
         <RecipeListContainer>
         {recipeList !== [] &&
