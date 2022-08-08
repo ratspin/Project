@@ -1,5 +1,5 @@
 import Axios from "axios";
-import "./App2.css";
+import "./RecipeFinder2.css";
 import { useState } from "react";
 import RecipeTile from "./RecipeTile";
 import React  from 'react';
