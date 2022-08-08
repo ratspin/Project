@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import {RecipeComponent} from './RecipeComponent'
-import {Container,Header,RecipeImage,AppName,SearchBox,SearchIcon,SearchInput} from './style/header'
-import {RecipeListContainer} from './style/Recipe'
+import {Container,Header,RecipeImage,AppName,SearchBox,SearchIcon,SearchInput} from '../style/header'
+import {RecipeListContainer} from '../style/Recipe'
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
