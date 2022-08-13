@@ -20,6 +20,7 @@ export const AppName = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: #FFA500;
 `;
 export const SearchBox = styled.div`
   display: flex;

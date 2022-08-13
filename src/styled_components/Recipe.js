@@ -53,3 +53,11 @@ export const Placeholder = styled.img`
   margin: 200px;
   opacity: 50%;
 `;
+export const Seecalories = styled(SeeMoreText)`
+  color:red;
+  border: solid 1px red;
+`;
+export const SeeNutrients = styled(SeeMoreText)`
+  color: #5677fc;
+  border: solid 1px #5677fc;
+`;
