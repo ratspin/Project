@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./CheckboxLabels.css";
-import {Container,Header} from '../styled_components/Search-header'
+import {Container,Header} from '../../styled_components/Search-header'
 function CheckboxLabels() {
   const [checkedList, setCheckedList] = useState([]);
   const listData = [
