@@ -27,7 +27,7 @@ export default function Filter2() {
         <div className="container">
             <div className="card">
                 <div className="card-header">
-                    <p className="title">โปรดระบุโรคของคุณ</p>
+                    <p className="title">โปรดระบุอาหารที่คุณแพ้</p>
                 </div>
         <div className="list-container">
               {checkedList.map((item, index) => {
