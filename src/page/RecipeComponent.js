@@ -4,7 +4,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
 
-import {RecipeContainer,CoverImage,RecipeName,SeeMoreText,IngredientsText,SeeNewTab,Seecalories,SeeNutrients} from '../styled_components/Recipe'
+import {RecipeContainer,CoverImage,RecipeName,SeeMoreText,IngredientsText,SeeNewTab,Seecalories,SeeNutrients} from './styled_components/Recipe'
 
 export const RecipeComponent = (props) => {
     const [show, setShow] = useState("");

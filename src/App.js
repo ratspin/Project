@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RecipeFinder from './page/RecipeFinder'
 import RecipeFinder2 from './page/RecipeFinder2'
 import Filter from './page/filter/Filter1'
+import Filter2 from './page/filter/Filter2'
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <BrowserRouter>
         <Routes>
           <Route path='/' element={<Filter  />} />
+          <Route path='/Filter2' element={<Filter2 />} />
           <Route path='/RecipeFinder' element={<RecipeFinder />} />
           <Route path='/RecipeFinder2' element={<RecipeFinder2 />} />
         </Routes>

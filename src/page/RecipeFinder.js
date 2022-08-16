@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import {RecipeComponent} from './RecipeComponent'
-import {Container,Header,AppName,SearchBox,SearchIcon,SearchInput} from '../styled_components/Search-header'
-import {RecipeListContainer} from '../styled_components/Recipe'
+import {Container,Header,AppName,SearchBox,SearchIcon,SearchInput} from './styled_components/Search-header'
+import {RecipeListContainer} from './styled_components/Recipe'
 const APP_ID = "5ed03060&";
 const APP_KEY = "91001199901b59990e413c4286c3fcc3";
 
