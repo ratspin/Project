@@ -10,7 +10,7 @@ import {strings} from './filter/Filter3'
 // const HealthLabels = healthLabels;
 const APP_ID = "5ed03060&";
 const APP_KEY = "91001199901b59990e413c4286c3fcc3";
-// const thai = "thai";
+const thai = "thai";
 // var st = "44";
 
 const RecipeFinder = () => {
@@ -20,7 +20,7 @@ const RecipeFinder = () => {
   const fetchData = async (searchString) => {
     // st = searchString+thai;
     const response = await Axios.get(
-      ` https://api.edamam.com/search?q=${searchString}" "${strings}&app_id=${APP_ID}&app_key=${APP_KEY}&dietLabels=${dietLabels}&healthLabels=${healthLabels}`,
+      ` https://api.edamam.com/search?q=${searchString}" "${strings}" "${thai}&app_id=${APP_ID}&app_key=${APP_KEY}&dietLabels=${dietLabels}&healthLabels=${healthLabels}&from=0&to=19`,
       ); 
       updateRecipeList(response.data.hits);
       console.log(response.data.hits);

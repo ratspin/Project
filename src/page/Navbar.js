@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
+import { Link } from 'react-router-dom'
 
 const pages = ['Your info', 'Search',];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -113,19 +114,20 @@ const Navbar = () => {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+         
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}> 
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+               <Link to="./Filter">   {page} </Link> 
               </Button>
-            ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
+            ))} 
+          </Box> 
+             
+          <Box sx={{ flexGrow: 0 }} >
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="User" img="/img/icon.png" />
