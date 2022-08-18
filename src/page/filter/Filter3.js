@@ -5,6 +5,7 @@ export var strings
 export default function Filter3() {
     const [string, setstring] = useState("");
     strings = string
+    console.log(strings);
     return (
         <div className="container">
             <div className="card">

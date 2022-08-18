@@ -6,7 +6,7 @@ export var healthLabels
 export default function Filter2() {
     const [healthLabel, sethealthLabels] = useState("");
     healthLabels = healthLabel
-
+    console.log(healthLabels);
     return (
         <div className="container">
             <div className="card">
