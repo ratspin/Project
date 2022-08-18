@@ -1,5 +1,6 @@
 import React from "react";
 import background from "../img/tom-yum-kung.jpg";
+import Navbar from './Navbar'
 
 var sectionStyle = {
     backgroundPosition: 'center',
@@ -12,7 +13,9 @@ var sectionStyle = {
 
 export default function Home() {
     return (
-        <section style={ sectionStyle }>
-        </section>
+      <div>
+      <Navbar/>
+      <section style={ sectionStyle }> </section>
+        </div>
     );
   }
