@@ -6,7 +6,7 @@ export default function Filter3() {
     return (
         <div className="container">
             <div className="card">
-                <div className="card-header"> <p className="title">โปรดระบุอาหารที่คุณแพ้</p> </div>
+                <div className="card-header"> <p className="title">โปรดระบุประเภทเนื้อสัตว์ที่คุณชื่นชอบ</p> </div>
                 <div className="card-body">
                     <div className="checkbox-container">
                         <div onChange = {() => sethealthLabels("peanut-free")} >    <input type="checkbox" /><label>เนื้อหมู   </label>    </div><br/>
