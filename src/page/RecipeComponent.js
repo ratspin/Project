@@ -65,7 +65,7 @@ export const RecipeComponent = (props) => {
                   <tr key={index} className="ingredient-list">
                     <td>{totalNutrients.label}</td>
                     <td>{totalNutrients.quantity}</td>
-                    <td>{totalNutrients.measure}</td>
+                    <td>{totalNutrients.unit}</td>
                   </tr>
                 ))}
               </tbody>

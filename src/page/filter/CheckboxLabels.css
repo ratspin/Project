@@ -23,6 +23,7 @@
   overflow: hidden;
   margin: 0 0.5rem;
   border: solid 1px #f8ae1a;
+  border-radius: 6px;
 }
  
 .card-header{

@@ -10,20 +10,24 @@ import {strings} from './filter/Filter3'
 // const HealthLabels = healthLabels;
 const APP_ID = "5ed03060&";
 const APP_KEY = "91001199901b59990e413c4286c3fcc3";
-const thai = "thai";
-var st = "44";
+// const thai = "thai";
+// var st = "44";
 
 const RecipeFinder = () => {
   const [searchQuery, updateSearchQuery] = useState("");
   const [recipeList, updateRecipeList] = useState([]);
   const [timeoutId, updateTimeoutId] = useState();
   const fetchData = async (searchString) => {
-    st = searchString+thai;
+    // st = searchString+thai;
     const response = await Axios.get(
-      ` https://api.edamam.com/search?q=${st}&app_id=${APP_ID}&app_key=${APP_KEY}&dietLabels=${dietLabels}&healthLabels=${healthLabels}`,
+      ` https://api.edamam.com/search?q=${searchString}" "${strings}&app_id=${APP_ID}&app_key=${APP_KEY}&dietLabels=${dietLabels}&healthLabels=${healthLabels}`,
       ); 
       updateRecipeList(response.data.hits);
       console.log(response.data.hits);
+      console.log(searchString);
+      console.log(dietLabels);
+      console.log(healthLabels);
+      console.log(strings);
   };
   
   const onTextChange = (e) => {
@@ -48,8 +52,8 @@ const RecipeFinder = () => {
           <AppName>Recipe Finder</AppName>
         </Header>
 
-        <p>{healthLabels}<br/>{dietLabels}<br/>{strings}<br/>{searchQuery}</p>
-        <p>{strings}{st}</p>
+        {/* <p>{healthLabels}<br/>{dietLabels}<br/>{strings}<br/>{searchQuery}</p>
+        <p>{strings}</p> */}
 
         <RecipeListContainer>
           {recipeList !== [] &&recipeList.map((recipe) => {
