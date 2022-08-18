@@ -18,7 +18,8 @@ export default function Filter3() {
                         <div onChange = {() => setstring("beef")} >           <input type="checkbox" /><label>เนื้อวัว    </label>    </div><br/>
                     </div>
                 </div>
-            </div> <p>{strings}</p>
+            </div> 
+            {/* <p>{strings}</p> */}
         </div>
   );
 }

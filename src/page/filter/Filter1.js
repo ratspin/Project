@@ -25,7 +25,7 @@ export default function Filter1() {
                     </div>
                 </div>
             </div>  
-                    <p>{healthLabels}</p>   <p>{dietLabels}</p>
+                    {/* <p>{healthLabels}</p>   <p>{dietLabels}</p> */}
         </div>
   );
 }

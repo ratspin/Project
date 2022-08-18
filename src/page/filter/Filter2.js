@@ -22,7 +22,8 @@ export default function Filter2() {
                         <div onChange = {() => sethealthLabels("egg-free")}>        <input type="checkbox" /><label>ไข่      </label>     </div>
                     </div>
                 </div>
-            </div> <p>{healthLabels}</p>
+            </div> 
+            {/* <p>{healthLabels}</p> */}
         </div>
   );
 }
