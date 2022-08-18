@@ -4,9 +4,9 @@ import "./CheckboxLabels.css";
 export var healthLabels
 
 export default function Filter2() {
-    const [healthLabels, sethealthLabels] = useState("");
+    const [healthLabel, sethealthLabels] = useState("");
     healthLabels = healthLabel
-    
+
     return (
         <div className="container">
             <div className="card">

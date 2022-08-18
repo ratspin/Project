@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import "./CheckboxLabels.css";
 
+export var strings
 export default function Filter3() {
-    const [healthLabels, sethealthLabels] = useState("");
+    const [string, setstring] = useState("");
+    strings = string
     return (
         <div className="container">
             <div className="card">
                 <div className="card-header"> <p className="title">โปรดระบุประเภทเนื้อสัตว์ที่คุณชื่นชอบ</p> </div>
                 <div className="card-body">
                     <div className="checkbox-container">
-                        <div onChange = {() => sethealthLabels("peanut-free")} >    <input type="checkbox" /><label>เนื้อหมู   </label>    </div><br/>
-                        <div onChange = {() => sethealthLabels("soy-free")}>        <input type="checkbox" /><label>เนื้อไก่   </label>    </div><br/>
-                        <div onChange = {() => sethealthLabels("crustacean-free")}> <input type="checkbox" /><label>เนื้อปลา  </label>    </div><br/>
-                        <div onChange = {() => sethealthLabels("shellfish-free")} > <input type="checkbox" /><label>เนื้อวัว    </label>    </div><br/>
-                        <div onChange = {() => sethealthLabels("egg-free")}>        <input type="checkbox" /><label>เนื้อเป็ด   </label>    </div>
+                        <div onChange = {() => setstring("pork")} >           <input type="checkbox" /><label>เนื้อหมู   </label>    </div><br/>
+                        <div onChange = {() => setstring("chicken")}>         <input type="checkbox" /><label>เนื้อไก่   </label>    </div><br/>
+                        <div onChange = {() => setstring("fish")}>            <input type="checkbox" /><label>เนื้อปลา  </label>    </div><br/>
+                        <div onChange = {() => setstring("beef")} >           <input type="checkbox" /><label>เนื้อวัว    </label>    </div><br/>
                     </div>
                 </div>
-            </div> <p>{healthLabels}</p>
+            </div> <p>{strings}</p>
         </div>
   );
 }
