@@ -1,0 +1,73 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+ 
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+ 
+.card {
+  margin: 50%;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 2px solid #F6F6F6;
+  overflow: hidden;
+  margin: 0 0.5rem;
+  border: solid 1px #f8ae1a;
+  border-radius: 6px;
+}
+ 
+.card-header{
+  border-bottom: 1px solid #F6F6F6;
+  padding: 1rem 1.2rem;
+  background-color: #f8ae1a;
+}
+ 
+.title {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+ 
+.card-body{
+  padding: 1rem 1.2rem
+}
+ 
+.checkbox-container {
+  padding: 0.5rem;
+}
+ 
+label{
+  font-size: 20px;
+  color: #343434;
+  margin-left: 0.5rem;
+}
+ 
+.list-container{
+  padding: 0.5rem 1rem 0 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+ 
+.chip {
+  padding: 0.3rem 1rem;
+  background-color: #ff9451;
+  border-radius: 0.2rem;
+  margin: 0.2rem;
+}
+ 
+.chip-label {
+  font-size: 15px;
+  color:#000
+}

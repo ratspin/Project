@@ -8,12 +8,12 @@ var similar_score  = function(x,y){
     
         for(var key in y)   sum.push(Math.pow((y[key] - x[key]),2))
      
-        for(var i = 1 ; i <= 4 ; i ++ )     tmp.push(sum[i]*W1)
-        for(var i = 5 ; i <= 8 ; i ++ )     tmp.push(sum[i]*W2)
-        for(var i = 9 ; i <= 12 ; i ++ )    tmp.push(sum[i]*W3)
+        for(var i1 = 1 ; i1 <= 4 ; i1 ++ )     tmp.push(sum[i1]*W1)
+        for(var i2 = 5 ; i2 <= 8 ; i2 ++ )     tmp.push(sum[i2]*W2)
+        for(var i3 = 9 ; i3 <= 12 ; i3 ++ )    tmp.push(sum[i3]*W3)
          
         var sum_all = 0
-        for(var i = 0 ; i < tmp.length ; i++ )  sum_all += tmp[i];
+        for(var i4 = 0 ; i4 < tmp.length ; i4++ )  sum_all += tmp[i4];
         var euclid = Math.sqrt(sum_all)
         var similar = 1 / (1 + euclid )
 
@@ -36,8 +36,8 @@ var similar_sort  = function(user,food,similar_score,num_food){
 
     //เก็บค่าค่าความคล้ายคลึงแต่ละเมนูอาหาร โดยมีจำนวนที่เก็บเท่ากับ num_food
     var scores = [] ;
-    for(var i = 0 ; i < num_food ; i++ ){
-        scores.push(similar_all[i]);
+    for(var i5 = 0 ; i5 < num_food ; i5++ ){
+        scores.push(similar_all[i5]);
     }
 
     return scores ;
@@ -45,9 +45,9 @@ var similar_sort  = function(user,food,similar_score,num_food){
 
 //คำนวณหาค่าน้ำหนักของแต่ละเกณฑ์
 var Weight  = function(jsn){ 
-    MaxC1 = {} //ค่าสูงสุดของเกณฑ์ที่ 1 (โรค)
-    MaxC2 = {} //ค่าสูงสุดของเกณฑ์ที่ 2 (อาหารที่แพ้)
-    MaxC3 = {} //ค่าสูงสุดของเกณฑ์ที่ 3 (เนื้อสัตว์ที่ชอบ)
+    var MaxC1 = {} //ค่าสูงสุดของเกณฑ์ที่ 1 (โรค)
+    var MaxC2 = {} //ค่าสูงสุดของเกณฑ์ที่ 2 (อาหารที่แพ้)
+    var MaxC3 = {} //ค่าสูงสุดของเกณฑ์ที่ 3 (เนื้อสัตว์ที่ชอบ)
     // var test = []  //
     for(var i = 0 ; i < jsn.length ; i ++ ){
         //หาค่า rateing สูงสุดของแต่ละเกณฑ์
@@ -56,9 +56,9 @@ var Weight  = function(jsn){
         MaxC3[i] = Math.max(jsn[i]["เนื้อ"],jsn[i]["ไก่"],jsn[i]["กุ้ง"],jsn[i]["หมู"])  
         
         //คำนวณหาค่าน้ำาหนักของแต่ละเกณฑ์
-        Wc1 = MaxC1[i] / (MaxC1[i] + MaxC2[i] + MaxC3[i])
-        Wc2 = MaxC2[i] / (MaxC1[i] + MaxC2[i] + MaxC3[i])
-        Wc3 = MaxC3[i] / (MaxC1[i] + MaxC2[i] + MaxC3[i])
+        var Wc1 = MaxC1[i] / (MaxC1[i] + MaxC2[i] + MaxC3[i])
+        var Wc2 = MaxC2[i] / (MaxC1[i] + MaxC2[i] + MaxC3[i])
+        var Wc3 = MaxC3[i] / (MaxC1[i] + MaxC2[i] + MaxC3[i])
 
         // test.push({Wc1,Wc2,Wc3});  //
 

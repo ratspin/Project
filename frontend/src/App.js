@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Filter from './page/filter/Filter_food'
-import Home from './page/Home'
+import U from './page/user_info/Info1'
+// import Home from './page/Home'
 
 
 export default function App() {
@@ -9,8 +9,8 @@ export default function App() {
       <div>
         <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home  />} />
-          <Route path='/Filter' element={<Filter />} />
+          {/* <Route path='/' element={<Home  />} /> */}
+          <Route path='/' element={<U/>} />
         </Routes>
         </BrowserRouter>
       </div>
