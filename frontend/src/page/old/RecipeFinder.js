@@ -6,19 +6,18 @@ import {RecipeListContainer} from './styled_components/Recipe'
 import {dietLabels} from '../filter/Filter1'
 import {healthLabels} from '../filter/Filter2'
 import {strings} from '../filter/Filter3'
-// const DietLabels = dietLabels;
-// const HealthLabels = healthLabels;
+
 const APP_ID = "5ed03060&";
 const APP_KEY = "91001199901b59990e413c4286c3fcc3";
 const thai = "thai";
-// var st = "44";
+
 
 const RecipeFinder = () => {
   const [searchQuery, updateSearchQuery] = useState("");
   const [recipeList, updateRecipeList] = useState([]);
   const [timeoutId, updateTimeoutId] = useState();
   const fetchData = async (searchString) => {
-    // st = searchString+thai;
+
     const response = await Axios.get(
       ` https://api.edamam.com/search?q=${searchString}" "${strings}" "${thai}&app_id=${APP_ID}&app_key=${APP_KEY}&dietLabels=${dietLabels}&healthLabels=${healthLabels}&from=0&to=19`,
       ); 
@@ -39,6 +38,7 @@ const RecipeFinder = () => {
 
   return (
       <Container>
+        <p>{dietLabels}</p>
         <Header>
           <AppName>Recipe Finder</AppName>
           <SearchBox>
@@ -52,9 +52,9 @@ const RecipeFinder = () => {
           <AppName>Recipe Finder</AppName>
         </Header>
 
-        {/* <p>{healthLabels}<br/>{dietLabels}<br/>{strings}<br/>{searchQuery}</p>
+        {/* <br/>{dietLabels}<br/>{strings}<br/>{searchQuery}</p>
         <p>{strings}</p> */}
-
+        
         <RecipeListContainer>
           {recipeList !== [] &&recipeList.map((recipe) => {
             return <RecipeComponent  recipe={recipe.recipe} />;
