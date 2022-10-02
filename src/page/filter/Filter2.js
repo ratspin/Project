@@ -15,7 +15,7 @@ export default function Filter2() {
                     <div className="checkbox-container">
                         <div onChange = {() => sethealthLabels("peanut-free")} >    <input type="checkbox" /><label>ถั่วลิสง   </label>    </div><br/>
                         <div onChange = {() => sethealthLabels("soy-free")}>        <input type="checkbox" /><label>ถั่วเหลือง </label>    </div><br/>
-                        <div onChange = {() => sethealthLabels("crustacean-free")}> <input type="checkbox" /><label>ปลา     </label>    </div><br/>
+                        <div onChange = {() => sethealthLabels("fish-free")}> <input type="checkbox" /><label>ปลา     </label>    </div><br/>
                         <div onChange = {() => sethealthLabels("shellfish-free")} > <input type="checkbox" /><label>หอย     </label>    </div><br/>
                         <div onChange = {() => sethealthLabels("crustacean-free")}> <input type="checkbox" /><label>กุ้ง      </label>     </div><br/>
                         <div onChange = {() => sethealthLabels("dairy-freee")}>     <input type="checkbox" /><label>นม      </label>     </div><br/>
