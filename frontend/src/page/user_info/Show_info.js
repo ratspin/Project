@@ -1,24 +1,68 @@
-// var result = require('../../calculatetion/data');
-// console.log("result"); 
+// // import {disease_value } from './Info1'
+// // import {protein_value } from './Info2'
+// // console.log(disease_value);
+// // console.log(protein_value); 
 
-import React from "react";
+import React, { useState } from "react";
+import {Container,RecipeListContainer,RecipeContainer,CoverImage,RecipeName,IngredientsText,SeeMoreText,SeeNutrients,DialogImage} from '../old/styled_components/Recipe'
+import Dialog from "@material-ui/core/Dialog";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogActions from "@material-ui/core/DialogActions";
 
-import {disease_value} from './Info1'
 
+var Result = require('../../calculatetion/data');
 
-export default function () {
- 
-      console.log(disease_value);
+export default function Show_info0() {
+  const [show, setShow] = useState("");
+  const [show2, setShow2] = useState("");
+  var food_img = []
+  var food_ingr = []
+  var food_db = []
+  var food_name = []
+  var food_similar = []
 
+  for(var i = 0; i < Result.length; i++) {
+    food_img = "food/"+ Result[i].food + ".png"
+    food_ingr = "ingredients/"+ Result[i].food + ".png"
+    food_name = Result[i].food
+    food_similar = Result[i].similar_rate
+    food_db.push({food_img:food_img,food_ingr:food_ingr,food_name:food_name,food_similar:food_similar})
+  }
+
+  console.log(food_db)
 
 
   return (
-      <div className="container">
-        <p>{disease_value}</p> 
-        </div>
+    <Container>
+    <RecipeListContainer>
+        {food_db.map (result =>{return (<>
+          <Dialog onClose={() => console.log("")}  open={!!show}>
+            <DialogContent>
+              <DialogImage src={result.food_ingr} alt={result.food_name} />
+            </DialogContent>
+            <DialogActions>
+              <SeeMoreText onClick={() => setShow("")}>Close</SeeMoreText>
+            </DialogActions>
+          </Dialog>
+
+          <Dialog onClose={() => console.log("")}  open={!!show2}>
+            <DialogContent>
+              <DialogImage src={result.food_img} alt={result.food_name} />
+            </DialogContent>
+            <DialogActions>
+              <SeeMoreText onClick={() => setShow2("")}>Close</SeeMoreText>
+            </DialogActions>
+          </Dialog>
+
+          <RecipeContainer>
+            <CoverImage src={result.food_img} alt={result.food_name} />
+            <RecipeName>{result.food_name}</RecipeName>
+            <SeeNutrients onClick={() => setShow(!show)} > ข้อมูลวัตถุดิบ</SeeNutrients>  
+            <IngredientsText onClick={() => setShow2(!show2)} > ข้อมูลโภชนาการ </IngredientsText>
+            {/* <SeeMoreText> Calories </SeeMoreText> */}
+          </RecipeContainer>
+          </>)})}
+    </RecipeListContainer>
+    </Container>  
   )
-}
-
-
-
-
+} 
