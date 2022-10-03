@@ -1,24 +1,37 @@
 import styled from 'styled-components'
 
+
+export const Container = styled.div`
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+`;
+
 export const RecipeListContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 30px;
-    gap: 20px;
+    padding: 10px;
+    gap: 10px;
     justify-content: space-evenly;
 `;
 export  const RecipeContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 300px;
+    width: 250px;
     box-shadow: 0 3px 10px 0 #aaa;
 `;
 export  const CoverImage = styled.img`
   object-fit: cover;
-  height: 300px;
+  height: 250px;
 `;
+
+export  const DialogImage = styled.img`
+  object-fit: cover;
+  height: 500px;
+`;
+
 export const RecipeName = styled.span`
   font-size: 18px;
   font-weight: 600;
