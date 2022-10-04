@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./CheckboxLabels.css";
 
 export var tmp = []
-export var protein = ["หมู","ไก่",'ปลา',"กุ้ง","หมึก","เนื้อวัว","ไข่"]
+export var protein = ["กะเพรา","ขิง",'ผักกาด',"หน่อไม้","ผักกระเฉด","ฟัก","คะน้า"]
 export var protein_value = []
 
-export default function Info2() {
+export default function Info3() {
     const [rating, setratings] = useState(4);
     const [rating1, setratings1] = useState(4);
     const [rating2, setratings2] = useState(4);
@@ -32,7 +32,7 @@ export default function Info2() {
     return (
         <div className="container">
             <div className="card">
-                <div className="card-header"> <p className="title">โปรดระบุระดับความชอบแหล่งโปรตีนหลัก</p> </div>
+                <div className="card-header"> <p className="title">โปรดระบุระดับความชอบของผัก</p> </div>
                 <div className="card-body">   
 
                         <div class="select-container">
