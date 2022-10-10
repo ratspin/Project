@@ -10,8 +10,8 @@ var weight_food = calculate.Weight(food)
 var similar = calculate.similar_score 
 var result = calculate.similar_sort(weight_user,weight_food,similar,65)
 
-console.log(result)
+// console.log(result)
 
-// module.exports = result;
+module.exports = result;
 
 
