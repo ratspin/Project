@@ -1,10 +1,5 @@
-// // import {disease_value } from './Info1'
-// // import {protein_value } from './Info2'
-// // console.log(disease_value);
-// // console.log(protein_value); 
-
 import React, { useState } from "react";
-import {Container,RecipeListContainer,RecipeContainer,CoverImage,RecipeName,IngredientsText,SeeMoreText,SeeNutrients,DialogImage} from '../old/styled_components/Recipe'
+import {RecipeListContainer,RecipeContainer,CoverImage,RecipeName,IngredientsText,SeeMoreText,SeeNutrients,DialogImage} from '../old/styled_components/Recipe'
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -12,9 +7,10 @@ import DialogActions from "@material-ui/core/DialogActions";
 
 var Result = require('../../calculatetion/data');
 
-export default function Show_info0() {
+export default function Show_info() {
   const [show, setShow] = useState("");
   const [show2, setShow2] = useState("");
+
   var food_img = []
   var food_ingr = []
   var food_db = []
@@ -33,21 +29,26 @@ export default function Show_info0() {
 
 
   return (
-    <Container>
+  
     <RecipeListContainer>
-        {food_db.map (result =>{return (<>
+        {food_db.map (data =>{return (<>
           <Dialog onClose={() => console.log("")}  open={!!show}>
+            
             <DialogContent>
-              <DialogImage src={result.food_ingr} alt={result.food_name} />
+            {food_db.map (result =>{return (
+              <DialogImage src={result.food_ingr} alt={"result.food_name"} />
+            )})}      
             </DialogContent>
+
             <DialogActions>
               <SeeMoreText onClick={() => setShow("")}>Close</SeeMoreText>
             </DialogActions>
+            
           </Dialog>
 
           <Dialog onClose={() => console.log("")}  open={!!show2}>
             <DialogContent>
-              <DialogImage src={result.food_img} alt={result.food_name} />
+              <DialogImage src="ingredients/ข้าวหมูแดง2.png" alt={"result.food_name"} />
             </DialogContent>
             <DialogActions>
               <SeeMoreText onClick={() => setShow2("")}>Close</SeeMoreText>
@@ -55,14 +56,14 @@ export default function Show_info0() {
           </Dialog>
 
           <RecipeContainer>
-            <CoverImage src={result.food_img} alt={result.food_name} />
-            <RecipeName>{result.food_name}</RecipeName>
+            <CoverImage src={data.food_img} alt="{result.food_name}" />
+            <RecipeName>{data.food_name}</RecipeName>
             <SeeNutrients onClick={() => setShow(!show)} > ข้อมูลวัตถุดิบ</SeeNutrients>  
             <IngredientsText onClick={() => setShow2(!show2)} > ข้อมูลโภชนาการ </IngredientsText>
             {/* <SeeMoreText> Calories </SeeMoreText> */}
           </RecipeContainer>
           </>)})}
     </RecipeListContainer>
-    </Container>  
+   
   )
 } 

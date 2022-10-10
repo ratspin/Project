@@ -9,7 +9,7 @@ export default function Filter1() {
     const [dietLabel, setdietLabels] = useState("");
     healthLabels = healthLabel
     dietLabels = dietLabel
-    console.log(dietLabels);
+    // console.log(dietLabels);
     // console.log(healthLabels);
     return (
         <div className="container">

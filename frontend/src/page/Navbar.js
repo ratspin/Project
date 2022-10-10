@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { Link } from 'react-router-dom'
 
-const pages = ['Your info', 'Search',];
+const pages = ['Your info'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navbar = () => {
