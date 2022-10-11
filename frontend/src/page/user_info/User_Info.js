@@ -2,9 +2,9 @@ import React from "react";
 import Info1 from "./Info1";
 import Info2 from "./Info2";
 import Info3 from "./Info3";
-import Show from "./Show_info";
-// import RicipeFinder2 from "../RecipeFinder2";
 import Navbar from '../Navbar'
+// import Showinfo from "./Show_info";
+// import CalResult from "./CalResult";
 
 export default function Info() {
  
@@ -15,7 +15,8 @@ export default function Info() {
         <Info1/><br/>
         <Info2/><br/>
         <Info3/><br/>
-        <Show/>
+        {/* <Showinfo/><br/> */}
+        {/* <CalResult/><br/> */}
     </div>
  
   );

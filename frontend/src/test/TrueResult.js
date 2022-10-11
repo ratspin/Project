@@ -1,8 +1,8 @@
 import { useState } from "react";
-import ShowResult from "./Show_Result";
+import ShowResult from './Show';
 import React  from 'react';
 import {RecipeListContainer} from '../page/old/styled_components/Recipe'
-var Result = require('../calculatetion/data2');
+var Result = require('../calculatetion/data');
 
 
 export default function App2() {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {RecipeListContainer,RecipeContainer,CoverImage,RecipeName,IngredientsText,SeeMoreText,SeeNutrients,DialogImage} from '../page/old/styled_components/Recipe'
+import {RecipeListContainer,RecipeContainer,CoverImage,RecipeName,IngredientsText,SeeMoreText,SeeNutrients,DialogImage} from '../old/styled_components/Recipe'
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
