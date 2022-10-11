@@ -6,7 +6,7 @@ export var protein = ["หมู","ไก่",'ปลา',"กุ้ง","หม
 export var protein_value = []
 
 export default function Info2() {
-    const [rating, setratings] = useState(4);
+    const [rating0, setratings0] = useState(4);
     const [rating1, setratings1] = useState(4);
     const [rating2, setratings2] = useState(4);
     const [rating3, setratings3] = useState(4);
@@ -14,7 +14,7 @@ export default function Info2() {
     const [rating5, setratings5] = useState(4);
     const [rating6, setratings6] = useState(4);
 
-    tmp[0] = rating
+    tmp[0] = rating0
     tmp[1] = rating1
     tmp[2] = rating2
     tmp[3] = rating3
@@ -27,7 +27,7 @@ export default function Info2() {
         protein_value[i] = tmp[i]
     }
 
-    // console.log(result)
+    // console.log(tmp)
 
     return (
         <div className="container">
@@ -37,7 +37,7 @@ export default function Info2() {
 
                         <div class="select-container">
                         <label>{protein[0]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings(tmp); }}  >
+                            <select  onChange = {(e) => {setratings0(e.target.value)}}  >
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -47,7 +47,7 @@ export default function Info2() {
     
                         <div class="select-container">
                         <label>{protein[1]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings1(tmp); }}  >
+                            <select  onChange = {(e) => {setratings1(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -57,7 +57,7 @@ export default function Info2() {
     
                         <div class="select-container">
                         <label>{protein[2]}</label>
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings2(tmp); }}  >
+                            <select  onChange = {(e) => {setratings2(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -67,7 +67,7 @@ export default function Info2() {
     
                         <div class="select-container">  
                         <label>{protein[3]}</label> 
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings3(tmp); }}  >
+                            <select  onChange = {(e) => {setratings3(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -77,7 +77,7 @@ export default function Info2() {
     
                         <div class="select-container"> 
                         <label>{protein[4]}</label> 
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings4(tmp); }}  >
+                            <select  onChange = {(e) => {setratings4(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -87,7 +87,7 @@ export default function Info2() {
     
                         <div class="select-container">  
                         <label>{protein[5]}</label> 
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings5(tmp); }}  >
+                            <select  onChange = {(e) => {setratings5(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -97,7 +97,7 @@ export default function Info2() {
     
                         <div class="select-container"> 
                         <label>{protein[6]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings6(tmp); }}  >
+                            <select  onChange = {(e) =>{setratings6(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>

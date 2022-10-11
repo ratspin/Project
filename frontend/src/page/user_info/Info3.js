@@ -10,13 +10,6 @@ export var vegetable = [  "คะน้า","เห็ด","ผักกาด",
 export var vegetable_value = []
 
 export default function Info3() {
-    const [rating, setratings] = useState(4);
-    const [rating1, setratings1] = useState(4);
-    const [rating2, setratings2] = useState(4);
-    const [rating3, setratings3] = useState(4);
-    const [rating4, setratings4] = useState(4);
-    const [rating5, setratings5] = useState(4);
-    const [rating6, setratings6] = useState(4);
     const [rating7, setratings7] = useState(4);
     const [rating8, setratings8] = useState(4);
     const [rating9, setratings9] = useState(4);
@@ -30,27 +23,34 @@ export default function Info3() {
     const [rating17, setratings17] = useState(4);
     const [rating18, setratings18] = useState(4);
     const [rating19, setratings19] = useState(4);
+    const [rating20, setratings20] = useState(4);
+    const [rating21, setratings21] = useState(4);
+    const [rating22, setratings22] = useState(4);
+    const [rating23, setratings23] = useState(4);
+    const [rating24, setratings24] = useState(4);
+    const [rating25, setratings25] = useState(4);
+    const [rating26, setratings26] = useState(4);
 
-    tmp[0] = rating
-    tmp[1] = rating1
-    tmp[2] = rating2
-    tmp[3] = rating3
-    tmp[4] = rating4
-    tmp[5] = rating5
-    tmp[6] = rating6
-    tmp[7] = rating7
-    tmp[8] = rating8
-    tmp[9] = rating9
-    tmp[10] = rating10
-    tmp[11] = rating11
-    tmp[12] = rating12
-    tmp[13] = rating13
-    tmp[14] = rating14
-    tmp[15] = rating15
-    tmp[16] = rating16
-    tmp[17] = rating17
-    tmp[18] = rating18
-    tmp[19] = rating19
+    tmp[0] = rating7
+    tmp[1] = rating8
+    tmp[2] = rating9
+    tmp[3] = rating10
+    tmp[4] = rating11
+    tmp[5] = rating12
+    tmp[6] = rating13
+    tmp[7] = rating14
+    tmp[8] = rating15
+    tmp[9] = rating16
+    tmp[10] = rating17
+    tmp[11] = rating18
+    tmp[12] = rating19
+    tmp[13] = rating20
+    tmp[14] = rating21
+    tmp[15] = rating22
+    tmp[16] = rating23
+    tmp[17] = rating24
+    tmp[18] = rating25
+    tmp[19] = rating26
 
     var result = []
     for (var i = 0 ; i < vegetable.length ; i++){
@@ -58,7 +58,7 @@ export default function Info3() {
         vegetable_value[i] = tmp[i]
     }
 
-    // console.log(result)
+    console.log(tmp)
 
     return (
         <div className="container">
@@ -68,7 +68,7 @@ export default function Info3() {
 
                         <div class="select-container">
                         <label>{vegetable[0]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings(tmp); }}  >
+                            <select  onChange = {(e) => {setratings7(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -78,7 +78,7 @@ export default function Info3() {
     
                         <div class="select-container">
                         <label>{vegetable[1]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings1(tmp); }}  >
+                            <select  onChange = {(e) => {setratings8(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -88,7 +88,7 @@ export default function Info3() {
     
                         <div class="select-container">
                         <label>{vegetable[2]}</label>
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings2(tmp); }}  >
+                            <select  onChange = {(e) => {setratings9(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -98,7 +98,7 @@ export default function Info3() {
     
                         <div class="select-container">  
                         <label>{vegetable[3]}</label> 
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings3(tmp); }}  >
+                            <select  onChange = {(e) => {setratings10(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -108,7 +108,7 @@ export default function Info3() {
     
                         <div class="select-container"> 
                         <label>{vegetable[4]}</label> 
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings4(tmp); }}  >
+                            <select  onChange = {(e) => {setratings11(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -118,7 +118,7 @@ export default function Info3() {
     
                         <div class="select-container">  
                         <label>{vegetable[5]}</label> 
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings5(tmp); }}  >
+                            <select  onChange = {(e) => {setratings12(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -128,7 +128,7 @@ export default function Info3() {
     
                         <div class="select-container"> 
                         <label>{vegetable[6]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings6(tmp); }}  >
+                            <select  onChange = {(e) => {setratings13(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -138,7 +138,7 @@ export default function Info3() {
 
                         <div class="select-container"> 
                         <label>{vegetable[7]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings7(tmp); }}  >
+                            <select  onChange = {(e) => {setratings14(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -148,7 +148,7 @@ export default function Info3() {
                             
                         <div class="select-container"> 
                         <label>{vegetable[8]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings8(tmp); }}  >
+                            <select  onChange = {(e) => {setratings15(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -158,7 +158,7 @@ export default function Info3() {
 
                         <div class="select-container">
                         <label>{vegetable[9]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings9(tmp); }}  >
+                            <select  onChange = {(e) => {setratings16(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -168,7 +168,7 @@ export default function Info3() {
     
                         <div class="select-container">
                         <label>{vegetable[10]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings10(tmp); }}  >
+                            <select  onChange = {(e) => {setratings17(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -178,7 +178,7 @@ export default function Info3() {
     
                         <div class="select-container">
                         <label>{vegetable[11]}</label>
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings11(tmp); }}  >
+                            <select  onChange = {(e) => {setratings18(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -188,7 +188,7 @@ export default function Info3() {
     
                         <div class="select-container">  
                         <label>{vegetable[12]}</label> 
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings12(tmp); }}  >
+                            <select  onChange = {(e) => {setratings19(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -198,7 +198,7 @@ export default function Info3() {
     
                         <div class="select-container"> 
                         <label>{vegetable[13]}</label> 
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings13(tmp); }}  >
+                            <select  onChange = {(e) => {setratings20(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -208,7 +208,7 @@ export default function Info3() {
     
                         <div class="select-container">  
                         <label>{vegetable[14]}</label> 
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings14(tmp); }}  >
+                            <select  onChange = {(e) => {setratings21(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -218,7 +218,7 @@ export default function Info3() {
     
                         <div class="select-container"> 
                         <label>{vegetable[15]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings15(tmp); }}  >
+                            <select  onChange = {(e) => {setratings22(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -228,7 +228,7 @@ export default function Info3() {
 
                         <div class="select-container"> 
                         <label>{vegetable[16]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings16(tmp); }}  >
+                            <select  onChange = {(e) => {setratings23(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -238,7 +238,7 @@ export default function Info3() {
                             
                         <div class="select-container"> 
                         <label>{vegetable[17]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings17(tmp); }}  >
+                            <select  onChange = {(e) => {setratings24(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -248,7 +248,7 @@ export default function Info3() {
 
                         <div class="select-container"> 
                         <label>{vegetable[18]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings18(tmp); }}  >
+                            <select  onChange = {(e) =>{setratings25(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>
@@ -258,7 +258,7 @@ export default function Info3() {
                             
                         <div class="select-container"> 
                         <label>{vegetable[19]}</label>  
-                            <select  onChange = {(e) => {const tmp = e.target.value; setratings19(tmp); }}  >
+                            <select  onChange = {(e) => {setratings26(e.target.value)}}>
                                 <option value="4">ชอบที่สุด</option>
                                 <option value="3">ชอบมาก</option>
                                 <option value="2">ชอบ</option>

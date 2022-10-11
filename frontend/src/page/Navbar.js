@@ -122,7 +122,7 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-               <Link to="./Filter">   {page} </Link> 
+               <Link to="./info">   {page} </Link> 
               </Button>
             ))} 
           </Box> 

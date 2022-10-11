@@ -8,7 +8,7 @@ var similar = calculate.similar_score
 var result = calculate.similar_sort(weight_user,weight_food,similar,65)
 
 
-console.log(user)
+// console.log(user)
 
 module.exports = result;
 
