@@ -7,7 +7,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 export default function ShowResult({ data }) {
   const [show, setShow] = useState("");
   const [show2, setShow2] = useState("");
-  const { food_img,food_name,food_ingr} = data;
+  const { food_img,food_name,food_ingr,food_nutr} = data;
   return (
     <RecipeListContainer>
       <Dialog onClose={() => console.log("")}  open={!!show}>     
@@ -22,7 +22,7 @@ export default function ShowResult({ data }) {
 
       <Dialog onClose={() => console.log("")}  open={!!show2}>
         <DialogContent>
-          <DialogImage src="ingredients/ข้าวหมูแดง2.png" alt={"result.food_name"} />
+          <DialogImage src={food_nutr} alt={food_name} />
         </DialogContent>
         <DialogActions>
           <SeeMoreText onClick={() => setShow2("")}>Close</SeeMoreText>

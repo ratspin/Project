@@ -21,6 +21,8 @@ export  const RecipeContainer = styled.div`
     padding: 10px;
     width: 250px;
     box-shadow: 0 3px 10px 0 #aaa;
+    border: 3px solid #f8ae1a;
+
 `;
 export  const CoverImage = styled.img`
   object-fit: cover;

@@ -125,13 +125,15 @@ export default function Show_info() {
       var food_db = []
       var food_name = []
       var food_similar = []
+      var food_nutr = []
   
       for(var i = 0; i < Result.length; i++) {
         food_img = "food/"+ Result[i].food + ".png"
         food_ingr = "ingredients/"+ Result[i].food + ".png"
+        food_nutr = "nutrients/"+ Result[i].food + ".png"
         food_name = Result[i].food
         food_similar = Result[i].similar_rate
-        food_db.push({food_img:food_img,food_ingr:food_ingr,food_name:food_name,food_similar:food_similar})
+        food_db.push({food_img:food_img,food_nutr:food_nutr,food_ingr:food_ingr,food_name:food_name,food_similar:food_similar})
       }
 
       setresults(food_db)
@@ -439,7 +441,7 @@ export default function Show_info() {
             </div> 
         </div>  <br/> <br/>
 
-        <div className="container" > <input className="form-submit-button"  type="submit" value="Submit" /> </div>
+        <div className="container" > <input className="form-submit-button"  type="submit" value="เรียบร้อย" /> </div>
       </form>
 
 
