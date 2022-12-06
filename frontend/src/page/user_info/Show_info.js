@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import ShowResult from "./Show_Result";
 import {RecipeListContainer} from '../old/styled_components/Recipe'
 
-
 var food = require('../../calculatetion/food.json');       
 var calculate = require("../../calculatetion/calculate.js");
-
 
 export default function Show_info() {
   const [results, setresults] = useState([]);
@@ -41,7 +39,6 @@ export default function Show_info() {
   const [rating25, setratings25] = useState(4);
   const [rating26, setratings26] = useState(4);
   
-
   var handleChange  = (e) => {
       const { checked} = e.target;
       const { value } = userinfo;
@@ -443,10 +440,6 @@ export default function Show_info() {
 
         <div className="container" > <input className="form-submit-button"  type="submit" value="เรียบร้อย" /> </div>
       </form>
-
-
-
-
 
       <RecipeListContainer>        
         {results !== [] &&results.map((data,) => {return <ShowResult data={data} />})}

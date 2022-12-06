@@ -3,9 +3,9 @@ import Axios from "axios";
 import {RecipeComponent} from './RecipeComponent'
 import {Container,Header,AppName,SearchBox,SearchIcon,SearchInput} from './styled_components/Search-header'
 import {RecipeListContainer} from './styled_components/Recipe'
-import {dietLabels} from '../filter/Filter1'
-import {healthLabels} from '../filter/Filter2'
-import {strings} from '../filter/Filter3'
+import {dietLabels} from './filter/Filter1'
+import {healthLabels} from './filter/Filter2'
+import {strings} from './filter/Filter3'
 
 const APP_ID = "5ed03060&";
 const APP_KEY = "91001199901b59990e413c4286c3fcc3";

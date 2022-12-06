@@ -1,5 +1,4 @@
 import React from "react";
-import background from "../img/tom-yum-kung.jpg";
 import Navbar from './Navbar'
 
 var sectionStyle = {
@@ -8,7 +7,7 @@ var sectionStyle = {
     backgroundRepeat: 'no-repeat',
     width: '100vw',
     height: '100vh',
-    backgroundImage: `url(${background})`
+    backgroundImage: `url(${"tom-yum-kung.jpg"})`
   };
 
 export default function Home() {

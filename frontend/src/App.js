@@ -1,10 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Info from './page/user_info/User_Info'
+import Info from './page/User_info/Info'
 import Home from './page/Home'
-import Filter from './page/filter/Filter_food'
-import Test from './page/user_info/Show_info'
-import Result from './test/TrueResult'
+import Filter from './page/old/filter/Filter_food'
 
 export default function App() {
   return (
@@ -14,8 +12,6 @@ export default function App() {
           <Route path='/' element={<Home  />} />
           <Route path='/info' element={<Info/>} />
           <Route path='/filter' element={<Filter/>} />
-          <Route path='/test' element={<Test/>} />
-          <Route path='/Result' element={<Result/>} />
         </Routes>
         </BrowserRouter>
       </div>
